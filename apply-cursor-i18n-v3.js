@@ -787,8 +787,7 @@ function rewrite(source, dict) {
     [
       /`Submit with \$\{([A-Za-z_$][\w$]*)\?"(?:\\u2318|\u2318) \+ ":"Ctrl \+ "\}Enter`/g,
       (_, a) => "`使用 ${" + a + '?"\\u2318 + ":"Ctrl + "}Enter 发送`'
-    ]
-
+    ],
     [
       /`Partial Accepts keybinding: \$\{([A-Za-z_$][\w$]*)\}`/g,
       (_, a) => "`部分接受快捷键：${" + a + "}`"
