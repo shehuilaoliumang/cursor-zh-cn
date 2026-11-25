@@ -1,0 +1,28 @@
+# local apply state and logs
+guard/state.json
+guard/reapply.log
+guard/disabled.flag
+apply-log*.json
+*.tmp
+*.log
+
+# official Cursor install or backup payloads must never be committed
+*.asar
+cursor-i18n-backup*/
+backup/
+out/
+workbench.*.js
+product.json
+main.i18n.json
+language-pack/
+
+# extracts and local scratch
+dump-*.txt
+leftover-*.txt
+leftover-*.json
+inspect-*.txt
+*-snip.txt
+
+node_modules/
+.DS_Store
+Thumbs.db
