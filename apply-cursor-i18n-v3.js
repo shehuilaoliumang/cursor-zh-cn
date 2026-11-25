@@ -378,8 +378,20 @@ const BARE_LABELS = [
   'Control whether agents can read files outside the workspace without approval',
   'Control whether agents can read files outside the workspace without approval.',
   "A new Project's coordinator starts at this effort. You can change it in the chat's model picker.",
-  'Allow agent to switch to modes without asking. When off, skips if unanswered within 15 seconds.'
-
+  'Allow agent to switch to modes without asking. When off, skips if unanswered within 15 seconds.',
+  'Run Mode',
+  'Run Mode Disabled by Team Admin',
+  'Enable Computer Use',
+  'Computer Use is ready',
+  'Disabled by your team admin.',
+  'Enabled by Run Everything Auto-Run Mode: Agent bypasses approval prompts for tools including Web Search.',
+  'Enabled by Run Everything Auto-Run Mode.',
+  'Allow the agent to celebrate with a shower of confetti',
+  'Unavailable while Reduce Motion is on (from settings or your system)',
+  'Access app interfaces',
+  'Use screenshots as context',
+  'By clicking Buy credits, you agree that we will charge the card you have on file for the amounts listed above and on a recurring basis for the top-up amount. To cancel, turn off in Settings.',
+  'By clicking Buy credits, you allow us to charge your card in the amount above.'
 ];
 
 /** Fragments inside template literals. The translation is the dictionary value. */
@@ -776,8 +788,31 @@ function rewrite(source, dict) {
       /`Submit with \$\{([A-Za-z_$][\w$]*)\?"(?:\\u2318|\u2318) \+ ":"Ctrl \+ "\}Enter`/g,
       (_, a) => "`使用 ${" + a + '?"\\u2318 + ":"Ctrl + "}Enter 发送`'
     ]
+
+    [
+      /`Partial Accepts keybinding: \$\{([A-Za-z_$][\w$]*)\}`/g,
+      (_, a) => "`部分接受快捷键：${" + a + "}`"
+    ],
+    [
+      /`Allow \$\{([A-Za-z_$][\w$]*(?:\([A-Za-z_$][\w$]*\))?)\} to use your computer\.`/g,
+      (_, a) => "`允许 ${" + a + "} 使用你的电脑。`"
+    ],
+    [
+      /`\$\{([A-Za-z_$][\w$]*(?:\([A-Za-z_$][\w$]*\))?)\} Computer Use is not available in this build`/g,
+      (_, a) => "`此版本不支持 ${" + a + "} 电脑操控`"
+    ],
+    [
+      /`Back to \$\{([A-Za-z_$][\w$]*(?:\([A-Za-z_$][\w$]*\))?)\}`/g,
+      (_, a) => "`返回 ${" + a + "}`"
+    ]
+
   ];
   const jsxPatches = [
+
+    [
+      /\["Sync chats and continue them in ",([A-Za-z_$][\w$]*(?:\([A-Za-z_$][\w$]*\))?)\]/g,
+      (_, a) => '["同步对话，并在 ",' + a + '," 中继续"]'
+    ],
     [
       /\["These domains must be accessible for ",([A-Za-z_$][\w$]*(?:\([A-Za-z_$][\w$]*\))?)," to function\. Add them to your firewall or proxy allowlist\."\]/g,
       (_, a) => '["这些域名必须可访问，",' + a + '," 才能正常工作。请将它们加入防火墙或代理允许列表。"]'

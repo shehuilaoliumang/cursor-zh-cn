@@ -1764,7 +1764,7 @@
   "This will clear the browser cache.": "这将清除浏览器缓存。",
   "This will remove all manually accepted certificates.": "这将移除所有手动接受的证书。",
   "Screen recording": "屏幕录制",
-  "Use screenshots as context": "使用截图作为上下文",
+  "Use screenshots as context": "将截图用作上下文",
   "Access app interfaces": "访问应用界面",
   "Enable Computer Use": "启用电脑操控",
   "Turn a recorded demonstration into a reusable skill.": "将录制的演示转化为可复用的技能。",
@@ -2517,5 +2517,12 @@
   ",\" used\"]": ",\" 已使用\"]",
   "{value:\"low\",label:\"Low\"},{value:\"medium\",label:\"Medium\"},{value:\"high\",label:\"High\"}": "{value:\"low\",label:\"低\"},{value:\"medium\",label:\"中\"},{value:\"high\",label:\"高\"}",
   "Title,{children:\"Imports\"}": "Title,{children:\"导入\"}",
-  "i18nKey:\"<balance>{balance}</balance> remaining\"": "i18nKey:\"<balance>{balance}</balance> remaining\",defaultValue:\"<balance>{balance}</balance> 剩余\""
+  "i18nKey:\"<balance>{balance}</balance> remaining\"": "i18nKey:\"<balance>{balance}</balance> remaining\",defaultValue:\"<balance>{balance}</balance> 剩余\"",
+  "Run Mode Disabled by Team Admin": "运行模式已由团队管理员禁用",
+  "Disabled by your team admin.": "已由团队管理员禁用。",
+  "Enabled by Run Everything Auto-Run Mode: Agent bypasses approval prompts for tools including Web Search.": "已由「全部运行」自动运行模式启用：智能体会跳过工具批准提示，包括 Web Search。",
+  "Enabled by Run Everything Auto-Run Mode.": "已由「全部运行」自动运行模式启用。",
+  "Unavailable while Reduce Motion is on (from settings or your system)": "已开启「减少动画」（来自设置或系统）时不可用",
+  "By clicking Buy credits, you agree that we will charge the card you have on file for the amounts listed above and on a recurring basis for the top-up amount. To cancel, turn off in Settings.": "点击「购买额度」即表示你同意我们按上述金额，对你已保存的卡片收费，并按充值金额定期扣款。如需取消，请在「设置」中关闭。",
+  "By clicking Buy credits, you allow us to charge your card in the amount above.": "点击「购买额度」即表示你授权我们按上述金额对你的卡片收费。"
 }
