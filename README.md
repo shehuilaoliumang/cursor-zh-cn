@@ -53,7 +53,7 @@ node apply-cursor-i18n-v3.js --adapt-new-version
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\guard\reapply.ps1" -InstallTask
 ```
 
-登录时以及大约每 15 分钟检查一次。若 Cursor 仍在运行，会等到下次再试。可用 `-Disable` / `-Enable` 临时开关，或 `-UninstallTask` 卸载任务。
+登录时以完全隐藏的方式启动守护进程，检查一次后改为监听安装目录变化（不再每 15 分钟轮询）。若 Cursor 仍在运行，会等到它完全退出（含托盘）后再写入，不会在应用启动过程中打补丁。可用 `-Disable` / `-Enable` 临时开关，或 `-UninstallTask` 卸载任务。
 
 ## 仓库里有什么
 
